@@ -37,6 +37,10 @@ body {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
 .links {
   padding: 8rem 6rem;
@@ -99,4 +103,105 @@ body {
 
 .contact a:hover {
   text-shadow: 0px 0px 4px red;
+}
+.projects {
+  width: 100%;
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  width: 320px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #423c4f;
+  box-shadow: 0 0 20px #423c4f;
+}
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.project-desc {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.project-btn {
+  padding: 10px 18px;
+  background: #423c4f;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  background: #59526a;
+  transform: scale(1.05);
+}
+
+/* for preodic table */
+#periodic-table .project-btn {
+  position: relative;
+  padding: 10px 18px;
+  background: #423c4f;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+#periodic-table .project-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #8df2d9;
+  z-index: 0;
+  transition: width 0.4s ease;
+  border-radius: 10px;
+}
+
+#periodic-table .project-btn:hover::before {
+  width: 100%;
+}
+
+#periodic-table .project-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+#periodic-table .project-btn:hover {
+  color: #000;
 }
